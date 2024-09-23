@@ -1,5 +1,5 @@
 "use client";
-import { FieldValues, Form, useForm, UseFormRegister } from "react-hook-form";
+import { FieldValues, UseFormRegister } from "react-hook-form";
 import { Input } from "@/components/ui/input";
 import FormSelect from "../FormSelect/FormSelect";
 import { Textarea } from "@/components/ui/textarea";
@@ -56,7 +56,10 @@ const FormField = ({
         <FormSelect defaultValue={default_value} onSelect={onSelect} options={options} />
       )}
       {type === "longtext" && (
-        <Textarea defaultValue={default_value} {...register(`field-${index}`, validationRules)} />
+        <Textarea
+          defaultValue={default_value}
+          {...register(`field-${index}`, validationRules)}
+        />
       )}
       {error && <div className="text-red-500">{error}</div>}
     </>

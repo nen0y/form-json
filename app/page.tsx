@@ -27,9 +27,6 @@ export default function Home() {
         onSubmit={handleSubmit(onSubmit)}
       >
         {JSONData.map((field, index) => {
-          if (field.type === "dropdown" && field.default_value) {
-            setValue(`field-${index}`, field.default_value);
-          }
           return (
             <FormField
               key={index}
