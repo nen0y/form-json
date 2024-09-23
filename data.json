@@ -1,0 +1,22 @@
+[
+  {
+    "default_value": "Test test",
+    "validation": "^[a-zA-Z ]{2,30}$",
+    "type": "text"
+  },
+  {
+    "min_value": 18,
+    "max_value": 100,
+    "type": "number"
+  },
+  {
+    "default_value": "Option 1",
+    "options": ["Option 1", "Option 2", "Option 3"],
+    "type": "dropdown"
+  },
+  {
+    "min_value": 18,
+    "type": "longtext",
+    "default_value": 99
+  }
+]
